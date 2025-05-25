@@ -49,3 +49,25 @@ function sumTwoSmallestNumbers(arr) {
     return arr.sort((a, b) => a - b).slice(0, 2).reduce((a, b) => a + b, 0);
     }
 //   bu yerda 0 ni ikkinchi argument qilib berishimning sababi
+
+
+
+//https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript
+
+
+// Sizga bo'sh bo'lmagan satr beriladi . Sizning vazifangiz satrning o'rta belgilarini qaytarishdir.
+
+// Agar satr uzunligi toq bo'lsa, o'rta belgini qaytaring.
+// Agar satr uzunligi teng bo'lsa, o'rtadagi 2 ta belgini qaytaring.
+
+
+function getMiddle(s) {
+
+  let str = Math.floor(s.length/2)
+  if(s.length%2==0){
+    return s.slice(str-1, str+1)
+  }
+  else{
+    return s.slice(str, str+1)
+  }
+}
