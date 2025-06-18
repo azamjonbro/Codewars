@@ -67,3 +67,17 @@ function dontGiveMeFive(start, end){
   }
 return result.length
 }
+
+
+
+
+
+
+
+// https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/javascript
+
+function findShort(s){
+  let result= []
+  s.split(" ").forEach((item)=>result.push(item.length))
+  return Math.min(...result)
+}
