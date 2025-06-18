@@ -6,7 +6,8 @@
 
 String hech qachon bo'sh bo'lmaydi va siz turli xil ma'lumotlar turlarini hisobga olishingiz shart emas.
 
-```function findShort(s){
+```
+function findShort(s){
   let result= []
   s.split(" ").forEach((item)=>result.push(item.length))
   return Math.min(...result)
