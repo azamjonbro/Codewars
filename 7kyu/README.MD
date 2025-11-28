@@ -33,3 +33,14 @@ function solution(str, ending){
 }
 
 ```
+[https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript]
+Bu safar hech qanday hikoya, nazariya yo'q. Quyidagi misollar funktsiyani qanday yozishni ko'rsatadi accum:
+
+Misollar:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+a..zAkkum parametri faqat va dan harflarni o'z ichiga olgan satrdir A..Z.
+```
+const accum = (s)=>  s.toLowerCase().split("").map((item,index)=> item.toUpperCase() +item.repeat(index).toLowerCase()).join("-")
+``` 
