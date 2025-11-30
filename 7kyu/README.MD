@@ -149,3 +149,37 @@ function removeUrlAnchor(url){
 
 console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'))
 ```
+
+### Alternate capitalization
+
+Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+The input will be a lowercase string with no spaces.
+
+Good luck!
+
+If you like this Kata, please try:
+
+
+```
+
+function capitalize(s){
+  let upper = ""
+  let lower = ""
+  s.split("").map((item, index)=>{
+    if(index%2==0){
+        upper+=item.toUpperCase()
+        lower+=item.toLowerCase()
+    }
+    else{
+        upper+=item.toLowerCase()
+        lower+=item.toUpperCase()
+    }
+  })
+    return [upper, lower]
+};
+
+capitalize("abcd")
+```
