@@ -127,3 +127,25 @@ function addBinary(a,b) {
 }
 ```
 
+
+![Strings]
+# String masalalar:
+
+- 1 : Remove anchor from URL
+question:
+Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+```
+"www.codewars.com#about" --> "www.codewars.com"
+"www.codewars.com?page=1" -->"www.codewars.com?page=1"
+```
+
+- answer:
+```
+function removeUrlAnchor(url){
+  let index = url.indexOf("#")
+  return url.slice(0, index)
+}
+
+console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'))
+```
