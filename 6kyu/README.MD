@@ -28,3 +28,36 @@ function toCamelCase(str) {
   }).join("");
 }
 ```
+
+### Replace With Alphabet Position
+
+Berilgan matndagi har bir harfni uning alifbodagi tartib raqami bilan almashtiring. Masalan, a = 1, b = 2, c = 3 va hokazo.
+Shart: faqat harflar hisobga olinadi, boshqa belgilar e'tiborga olinmaydi. Katta va kichik harflar farqlanmaydi.
+
+Misollar:
+```misol 
+Input = "The sunset sets at twelve o' clock."
+Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+```
+
+#### 1-chi yechim:
+```js
+function alphabetPosition(text) {
+  const lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz"
+  return text.split("").filter((item)=> /^[a-zA-Z]+$/.test(item)).map((item, index)=> lowercaseAlphabet.indexOf(item.toLowerCase())+1).join(" ")
+}
+```
+
+#### 2-chi yechim:
+```js
+
+function alphabetPosition(text) {
+  return text
+    .toLowerCase()
+    .split("")
+    .map(c => c.charCodeAt(0) - 96)
+    .filter(n => n > 0 && n <= 26)
+    .join(" ");
+}
+// faqat buni chatgpt menga bonus sifatida yozib berdi schemadagi xatoliklarni solishtirganimda
+```
