@@ -61,3 +61,22 @@ function alphabetPosition(text) {
 }
 // faqat buni chatgpt menga bonus sifatida yozib berdi schemadagi xatoliklarni solishtirganimda
 ```
+
+## Find The Parity Outlier
+
+Sizga butun sonlarni o'z ichiga olgan massiv (uzunligi kamida 3 bo'lishi mumkin, lekin juda katta bo'lishi mumkin) berilgan. Massiv butunlay toq sonlardan yoki bitta butun sondan tashqari butunlay juft sonlardan iborat N. Massivni argument sifatida qabul qiladigan va ushbu "chetga" qaytaradigan usulni yozing N.
+
+# Misol uchun
+``` test
+[2, 4, 0, 100, 4, 11, 2602, 36] -->  11 (the only odd number)
+
+[160, 3, 1719, 19, 11, 13, -21] --> 160 (the only even number)
+```
+```JavaScript
+function findOutlier(arr) {
+  const boshlangich = arr.slice(0, 3);
+  const asos = boshlangich.filter(n => n % 2 === 0).length >= 2;
+
+  return arr.find(n => asos ? n % 2 !== 0 : n % 2 === 0);
+}
+```
