@@ -80,3 +80,20 @@ function findOutlier(arr) {
   return arr.find(n => asos ? n % 2 !== 0 : n % 2 === 0);
 }
 ```
+
+## Dublicat encoded 
+
+Ushbu mashqning maqsadi satrni yangi satrga aylantirishdir, bunda yangi satrdagi har bir belgi "("asl satrda faqat bir marta paydo bo'lganda yoki ")"asl satrda bir necha marta paydo bo'lganda paydo bo'ladi. Belgining nusxasi ekanligini aniqlashda bosh harflarni e'tiborsiz qoldiring.
+
+### Example
+
+``` note
+"din"      =>  "((("
+"recede"   =>  "()()()"
+"Success"  =>  ")())())"
+"(( @"     =>  "))((" 
+```
+
+```
+const duplicateEncode= (word) =>word.toLowerCase().split("").map((item)=> word.toLowerCase().indexOf(item) == word.toLowerCase().lastIndexOf(item) ?"(" : ")").join("")
+```
