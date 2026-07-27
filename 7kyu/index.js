@@ -120,3 +120,13 @@
 // }
 
 
+// https://www.codewars.com/kata/52fba66badcd10859f00097e
+
+//sharti unlilarni olib tashlab qaytarish.
+
+let vovel = ["a", "e", "i", "o", "u"]
+function disemvowel(str) {
+ return str.split("").filter(item => !vovel.includes(item.toLowerCase())).join("")
+}
+console.log(disemvowel("This website is for losers LOL!"));
+
